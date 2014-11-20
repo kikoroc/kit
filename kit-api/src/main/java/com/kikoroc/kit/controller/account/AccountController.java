@@ -16,20 +16,27 @@ import org.springframework.web.bind.annotation.RestController;
  * kikoroc@gmail.com
  * https://github.com/kikoroc
  */
-@RestController(value = "/api/v1")
+@RestController
+@RequestMapping(value = "/api/v1")
 public class AccountController {
 
-    @RequestMapping("/ex/illegal")
+    @RequestMapping(value = "/ex/illegal")
     public HttpRet test() throws IllegalParameterException {
         throw new IllegalParameterException("parameter illegal.");
     }
 
-    @RequestMapping("/ex/all")
+    @RequestMapping(value = "/ex/all")
     public HttpRet all() throws Exception {
         throw new Exception("unkown error.");
     }
 
-    @RequestMapping("/hi/{user}")
+    @RequestMapping(value = "/test")
+    public HttpRet diviZero(){
+        int i = 5 / 0;
+        return new HttpRet(Const.RetCode.OK,String.valueOf(i));
+    }
+
+    @RequestMapping(value = "/hi/{user}")
     public HttpRet normal(@PathVariable String user){
         Account account = new Account();
         account.setName(user);
