@@ -1,6 +1,6 @@
 package com.kikoroc.kit.exception;
 
-import static com.kikoroc.kit.Const.RetCode;
+import com.kikoroc.kit.Const.RetCode;
 
 /**
  * Project : kit

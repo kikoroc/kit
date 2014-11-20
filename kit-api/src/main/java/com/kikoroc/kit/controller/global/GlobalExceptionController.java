@@ -25,18 +25,16 @@ public class GlobalExceptionController {
 
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ExceptionHandler(IllegalParameterException.class)
-    public @ResponseBody HttpRet handleIllegalParameterException(HttpServletRequest req,IllegalParameterException e){
-        HttpRet ret = new HttpRet(Const.RetCode.PARAM_ILLEGAL,
-                req.getRequestURI(),
+    public @ResponseBody HttpRet handleIllegalParameterException(IllegalParameterException e){
+        HttpRet ret = new HttpRet(e.getCode(),
                 e.getMsg());
         return ret;
     }
 
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     @ExceptionHandler(Exception.class)
-    public @ResponseBody HttpRet handleAllException(HttpServletRequest req,Exception e){
+    public @ResponseBody HttpRet handleAllException(Exception e){
         HttpRet ret = new HttpRet(Const.RetCode.SERVER_ERROR,
-                req.getRequestURI(),
                 e.getLocalizedMessage());
         return ret;
     }

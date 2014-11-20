@@ -15,21 +15,17 @@ public class HttpRet implements Serializable{
 
     private int code;
 
-    private String uri;
-
     private String msg;
 
     private Object data;
 
-    public HttpRet(int code, String uri, String msg) {
+    public HttpRet(int code, String msg) {
         this.code = code;
-        this.uri = uri;
         this.msg = msg;
     }
 
-    public HttpRet(int code, String uri, String msg, Object data) {
+    public HttpRet(int code, String msg, Object data) {
         this.code = code;
-        this.uri = uri;
         this.msg = msg;
         this.data = data;
     }
@@ -58,11 +54,4 @@ public class HttpRet implements Serializable{
         this.data = data;
     }
 
-    public String getUri() {
-        return uri;
-    }
-
-    public void setUri(String uri) {
-        this.uri = uri;
-    }
 }

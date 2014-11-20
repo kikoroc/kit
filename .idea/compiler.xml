@@ -31,5 +31,14 @@
         <module name="kit-web" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="kit-api" target="1.7" />
+      <module name="kit-dao" target="1.7" />
+      <module name="kit-exception" target="1.7" />
+      <module name="kit-model" target="1.7" />
+      <module name="kit-service" target="1.7" />
+      <module name="kit-util" target="1.7" />
+      <module name="kit-web" target="1.7" />
+    </bytecodeTargetLevel>
   </component>
 </project>

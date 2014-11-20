@@ -11,5 +11,12 @@
 
     <artifactId>kit-exception</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.kikoroc</groupId>
+            <artifactId>kit-model</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
 </project>
