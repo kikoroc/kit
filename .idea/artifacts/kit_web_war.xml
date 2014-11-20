@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="kit-web:war">
-    <output-path>$PROJECT_DIR$/kit-web/target</output-path>
-    <root id="archive" name="kit.war">
-      <element id="artifact" artifact-name="kit-web:war exploded" />
-    </root>
-  </artifact>
-</component>
