@@ -11,5 +11,12 @@
 
     <artifactId>kit-service</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.kikoroc</groupId>
+            <artifactId>kit-dao</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
 
 </project>

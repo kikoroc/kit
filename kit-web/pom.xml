@@ -16,7 +16,7 @@
         <dependency>
             <groupId>com.kikoroc</groupId>
             <artifactId>kit-api</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>${project.version}</version>
         </dependency>
     </dependencies>
 
@@ -26,10 +26,10 @@
             <plugin>
                 <groupId>org.eclipse.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>
-                <version>9.2.3.v20140905</version>
+                <version>9.2.5.v20141112</version>
                 <configuration>
                     <webApp>
-                        <contextPath>/kit</contextPath>
+                        <contextPath>/${parent.artifactId}</contextPath>
                     </webApp>
                 </configuration>
             </plugin>

@@ -2,8 +2,9 @@ package com.kikoroc.kit.controller.global;
 
 import com.kikoroc.kit.Const;
 import com.kikoroc.kit.dto.HttpRet;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * Project : kit
@@ -13,11 +14,12 @@ import org.springframework.web.bind.annotation.RestController;
  * kikoroc@gmail.com
  * https://github.com/kikoroc
  */
-@RestController
+//@RestController
+@Controller
 public class GlobalController {
 
     @RequestMapping("/")
-    public HttpRet welcome(){
+    public @ResponseBody HttpRet welcome(){
         return new HttpRet(Const.RetCode.OK,"welcome to kit.");
     }
 
